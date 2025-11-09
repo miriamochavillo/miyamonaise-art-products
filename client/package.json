@@ -9,13 +9,15 @@
     "lint": "biome lint --diagnostic-level=error --no-errors-on-unmatched",
     "lint:fix": "biome lint --write --no-errors-on-unmatched",
     "format": "biome format --write --no-errors-on-unmatched",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "fsd": "steiger ./src"
   },
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
+    "steiger": "^0.5.11",
     "@biomejs/biome": "2.3.2",
     "@eslint/js": "^9.36.0",
     "@types/node": "^24.6.0",
