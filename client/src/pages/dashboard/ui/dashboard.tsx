@@ -4,6 +4,7 @@ import mountainPoppies from '@app/assets/mountain-poppies.png';
 import pond from '@app/assets/pond.png';
 import sunset from '@app/assets/sunset.png';
 import { Box, Flex, Image, SimpleGrid, Text } from '@chakra-ui/react';
+import { paths } from '@shared/paths';
 import { motion } from 'framer-motion';
 import { MyArtworkButton } from './my-artwork-button';
 
@@ -12,22 +13,27 @@ export const Dashboard = () => {
     {
       image: pond,
       title: 'Canvas',
+      path: paths.canvas,
     },
     {
       image: sunset,
       title: 'Tote Bags',
+      path: paths.toteBags,
     },
     {
       image: coverWatercolor,
       title: 'Watercolor',
+      path: paths.watercolor,
     },
     {
       image: coverDigital,
       title: 'Digital',
+      path: paths.digital,
     },
     {
       image: mountainPoppies,
       title: 'Merch',
+      path: paths.merch,
     },
   ];
 
@@ -66,6 +72,7 @@ export const Dashboard = () => {
               key={artwork.title}
               cardImage={artwork.image}
               cardTitle={artwork.title}
+              path={artwork.path}
             />
           ))}
         </SimpleGrid>

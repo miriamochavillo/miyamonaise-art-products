@@ -18,6 +18,26 @@ export const routes: RouteObject[] = [
             element: <DashboardContainer />,
             path: paths.dashboard,
           },
+          {
+            element: '  Canvas',
+            path: paths.canvas,
+          },
+          {
+            element: 'Tote Bags',
+            path: paths.toteBags,
+          },
+          {
+            element: 'Watercolor',
+            path: paths.watercolor,
+          },
+          {
+            element: 'Digital',
+            path: paths.digital,
+          },
+          {
+            element: 'Merch',
+            path: paths.merch,
+          },
         ],
       },
     ],
