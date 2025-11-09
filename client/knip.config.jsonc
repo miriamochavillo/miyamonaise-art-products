@@ -11,7 +11,8 @@
   "ignore": [
     // "src/shared/api/apollo-client/generated/*",
     // "codegen.ts",
-    "steiger.config.ts"
+    "steiger.config.ts",
+    "src/shared/ui/theme/foundations/app-colors.ts"
   ],
   "ignoreDependencies": [
     // "@graphql-codegen/import-types-preset",
