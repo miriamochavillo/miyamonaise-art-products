@@ -1,6 +1,6 @@
 export const fonts = {
-  body: '"Noto Sans JP", sans-serif',
-  heading: '"Noto Sans JP", sans-serif',
+  body: 'Georgia, serif		',
+  heading: 'Georgia, serif	',
 } as const;
 
 export const fontWeights = {

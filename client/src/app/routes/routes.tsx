@@ -1,4 +1,4 @@
-import { Heading } from '@chakra-ui/react';
+import { DashboardContainer } from '@pages/dashboard';
 import { paths } from '@shared/paths';
 import { MainLayout } from '@shared/ui';
 import { Outlet, RouteObject } from 'react-router-dom';
@@ -15,8 +15,8 @@ export const routes: RouteObject[] = [
         ),
         children: [
           {
-            element: <Heading>Home</Heading>,
-            path: paths.home,
+            element: <DashboardContainer />,
+            path: paths.dashboard,
           },
         ],
       },

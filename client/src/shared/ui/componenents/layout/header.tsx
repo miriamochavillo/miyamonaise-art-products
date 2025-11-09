@@ -11,10 +11,12 @@ export const Header = () => {
       borderBottom={`1px solid ${appColors.background.gray}`}
       px={6}
       py={4}
+      bg={appColors.background.primary}
+      h="70px"
     >
-      <Flex>
-        <Text fontSize="24px" fontWeight="bold">
-          Miyamonaise
+      <Flex alignItems="center" justifyContent="center">
+        <Text fontSize="24px" fontStyle="italic" letterSpacing={2}>
+          miyamonaise
         </Text>
       </Flex>
     </Box>
