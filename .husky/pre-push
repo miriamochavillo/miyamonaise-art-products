@@ -1,0 +1,33 @@
+echo "GENERATE GRAPHQL --> starting husky..."
+
+# TODO: Uncomment once Apollo config is available
+# npm run generate-graphql --prefix client
+
+# git add client/src/shared/api/apollo-client/generated/gql.ts
+# git add client/src/shared/api/apollo-client/generated/graphql.ts
+# git add client/src/shared/api/apollo-client/generated/hooks.ts
+
+if git diff --name-only --cached | grep 'client/src/shared/api/apollo-client/generated/'; then
+  echo "\nThere are auto-generated files. It is recommended to commit them to keep the repository in sync.\n"
+fi
+
+latest_merge=$(git log --merges -n 1 --pretty=format:"%H")
+changed_folders=$(git diff --name-only $latest_merge HEAD | sort -u | awk 'BEGIN {FS="/"} {print $1}' | uniq)
+
+build() {
+  echo "Building $1..."
+  npm run build --prefix $1
+}
+
+for folder in $changed_folders; do
+  case $folder in
+    'client')
+      npm run check-all --prefix 'client'
+      build 'client'
+      ;;
+    'server')
+      build 'server'
+      ;;
+  esac
+done
+

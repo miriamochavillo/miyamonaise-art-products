@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/miriamochavillo/miyamonaise-art-products#readme",
   "devDependencies": {
-    "@biomejs/biome": "2.3.2"  
+    "@biomejs/biome": "2.3.2"  ,
+    "husky": "^9.1.7"
   }
 }

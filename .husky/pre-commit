@@ -1,0 +1,9 @@
+if git diff --name-only --cached | grep 'client/'; then
+  echo "CLIENT CHANGES DETECTED --> starting husky..."
+  npm run lint-staged --prefix client
+fi
+
+if git diff --name-only --cached | grep 'server/'; then
+  echo "SERVER CHANGES DETECTED --> starting husky..."
+  npm run lint-staged --prefix server
+fi
