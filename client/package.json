@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "biome lint --diagnostic-level=error --no-errors-on-unmatched",
+    "lint:fix": "biome lint --write --no-errors-on-unmatched",
+    "format": "biome format --write --no-errors-on-unmatched",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -14,6 +16,7 @@
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.3.2",
     "@eslint/js": "^9.36.0",
     "@types/node": "^24.6.0",
     "@types/react": "^19.1.16",
