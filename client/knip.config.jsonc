@@ -1,0 +1,21 @@
+{
+  "paths": {
+    "@app/*": ["src/app/*"],
+    "@entities/*": ["src/entities/*"],
+    "@pages/*": ["src/pages/*"],
+    "@shared/*": ["src/shared/*"],
+    "@widgets/*": ["src/widgets/*"],
+    "@features/*": ["src/features/*"]
+  },
+  "entry": "src/app/main.tsx",
+  "ignore": [
+    // "src/shared/api/apollo-client/generated/*",
+    // "codegen.ts",
+    "steiger.config.ts"
+  ],
+  "ignoreDependencies": [
+    // "@graphql-codegen/import-types-preset",
+    // "@graphql-codegen/typescript-msw",
+    // "@graphql-codegen/typescript-react-apollo"
+  ]
+}
