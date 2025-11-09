@@ -4,6 +4,7 @@ import mountainPoppies from '@app/assets/mountain-poppies.png';
 import pond from '@app/assets/pond.png';
 import sunset from '@app/assets/sunset.png';
 import { Box, Flex, Image, SimpleGrid, Text } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import { MyArtworkButton } from './my-artwork-button';
 
 export const Dashboard = () => {
@@ -32,13 +33,22 @@ export const Dashboard = () => {
 
   return (
     <Flex direction="column" pb={4} gap={10}>
-      <Image
-        src={mountainPoppies}
-        alt="hero"
-        objectFit="cover"
-        h="calc(100dvh - 70px)"
-        w="100%"
-      />
+      <motion.div
+        initial={{ scale: 1.1 }}
+        animate={{ scale: 1 }}
+        transition={{
+          duration: 2.5,
+          ease: [0.25, 0.1, 0.25, 1],
+        }}
+      >
+        <Image
+          src={mountainPoppies}
+          alt="hero"
+          objectFit="cover"
+          h="calc(100dvh - 70px)"
+          w="100%"
+        />
+      </motion.div>
 
       <Flex direction="column" alignSelf="center" w="100%" gap={4}>
         <Box>
