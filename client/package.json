@@ -14,8 +14,10 @@
     "knip": "knip -c knip.config.jsonc"
   },
   "dependencies": {
+    "jotai": "^2.15.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+     "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.2"
   },
   "devDependencies": {
     "steiger": "^0.5.11",

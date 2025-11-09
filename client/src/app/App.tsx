@@ -1,7 +1,8 @@
 import './App.css';
+import { Providers } from './providers/providers';
 
 function App() {
-  return <h1>Miyamonaise Art Products</h1>;
+  return <Providers />;
 }
 
 export default App;
